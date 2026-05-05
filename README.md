@@ -17,8 +17,8 @@ Compatibility:
 Add a `Highlight next unfinished activity` activity to a course. When a learner opens it, the plugin:
 
 1. Checks that course completion tracking is enabled.
-2. Finds the next unfinished eligible course module for the learner.
-3. Redirects the learner back to the course page and anchors them to that module.
+2. Highlights the next unfinished eligible course module for the learner.
+3. Redirects the learner back to the course page and anchors the screen to that module.
 
 If no suitable incomplete activity is found, it returns the learner to the course page with an informational message.
 
