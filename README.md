@@ -1,9 +1,9 @@
 # mod_nextstep
 
-Moodle activity module that redirects a learner to the next incomplete activity in a course.
+Moodle activity module that redirects a learner to highlight the next unfinished activity in a course.
 
 Plugin name:
-- `What to do next`
+- `Highlight next unfinished activity`
 
 Component:
 - `mod_nextstep`
@@ -14,10 +14,10 @@ Compatibility:
 
 ## What it does
 
-Add a `What to do next` activity to a course. When a learner opens it, the plugin:
+Add a `Highlight next unfinished activity` activity to a course. When a learner opens it, the plugin:
 
 1. Checks that course completion tracking is enabled.
-2. Finds the next incomplete course module after the current activity.
+2. Finds the next unfinished eligible course module for the learner.
 3. Redirects the learner back to the course page and anchors them to that module.
 
 If no suitable incomplete activity is found, it returns the learner to the course page with an informational message.
