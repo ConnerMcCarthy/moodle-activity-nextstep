@@ -35,10 +35,10 @@ The activity-type filter accepts Moodle module names such as `assign,quiz,forum`
 This repository is the plugin itself, so the Moodle plugin files live at the repo root.
 
 Important files:
-- [version.php](/home/ubuntu/mod-nextstep-repo/version.php)
-- [lib.php](/home/ubuntu/mod-nextstep-repo/lib.php)
-- [mod_form.php](/home/ubuntu/mod-nextstep-repo/mod_form.php)
-- [view.php](/home/ubuntu/mod-nextstep-repo/view.php)
+- [version.php](version.php)
+- [lib.php](lib.php)
+- [mod_form.php](mod_form.php)
+- [view.php](view.php)
 
 ## Install
 
