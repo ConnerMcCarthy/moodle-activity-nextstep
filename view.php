@@ -35,7 +35,22 @@ $target = mod_nextstep\local\next_finder::find_next_cm(
 );
 
 if ($target) {
-    $url = new moodle_url('/course/view.php', ['id' => $course->id, 'nextcmid' => $target->id]);
+    if (isset($target->sectionnum) && $target->sectionnum !== null) {
+        $format = course_get_format($course->id);
+        $modinfo = get_fast_modinfo($course, (int)$USER->id);
+        $targetsection = $modinfo->get_section_info((int)$target->sectionnum);
+        if ($targetsection && !empty($targetsection->id)) {
+            $format->remove_section_preference_ids('contentcollapsed', [(int)$targetsection->id]);
+        }
+    }
+
+    $params = ['id' => $course->id, 'nextcmid' => $target->id];
+    if (isset($target->sectionnum) && $target->sectionnum !== null) {
+        $sectionnum = (int)$target->sectionnum;
+        $params['expandsection'] = $sectionnum;
+    }
+
+    $url = new moodle_url('/course/view.php', $params);
     $url->set_anchor('module-' . $target->id);
     redirect($url);
 }

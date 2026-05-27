@@ -6,6 +6,19 @@
     animation: mod-nextstep-pulse 1.2s ease-in-out 5;
 }
 
+.course-section-header.mod-nextstep-highlight {
+    background: #fff4b3;
+    outline: 3px solid #d38f00;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 4px rgba(211, 143, 0, 0.18);
+    padding: 0.25rem 0.5rem;
+}
+
+.course-section-header.mod-nextstep-highlight .sectionname,
+.course-section-header.mod-nextstep-highlight [data-toggle="collapse"] {
+    background: transparent;
+}
+
 .mod-nextstep-sr-only {
     position: absolute;
     width: 1px;
